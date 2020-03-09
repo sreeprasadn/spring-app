@@ -6,6 +6,18 @@
  * User Manual available at https://docs.gradle.org/6.0.1/userguide/tutorial_java_projects.html
  */
 
+
+buildscript {
+    ext {
+        springBootVersion = '2.1.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
 plugins {
     // Apply the java plugin to add support for Java
     id 'java'
